@@ -13,3 +13,7 @@
 .round-bord {
 	border-radius: 15%;
 }
+
+.bord-bot {
+	border-bottom: solid black 1px;
+}
