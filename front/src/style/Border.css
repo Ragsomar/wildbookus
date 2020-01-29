@@ -1,0 +1,15 @@
+.bord-top {
+	border-top: solid black 1px;
+}
+
+.full-bord {
+	border: solid black 1px;
+}
+
+.round-pic {
+	border-radius: 50%;
+}
+
+.round-bord {
+	border-radius: 15%;
+}

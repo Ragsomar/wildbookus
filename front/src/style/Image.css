@@ -1,0 +1,9 @@
+:root {
+	--profile-pic: 75px;
+	--project-screenshot: 100%;
+}
+
+.profile-pic-size {
+	height: var(--profile-pic);
+	width: var(--profile-pic);
+}
