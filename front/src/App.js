@@ -13,15 +13,34 @@ class App extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			wilder: [],
-			projects: []
+			wilders: [],
+			projects: [],
+			isLoaded: false
 		}
 	}
+	componentDidMount() {
+		const url = [
+			`http://localhost:3000/wilders`,
+			`http://localhost:3000/projects`
+		]
+
+		axios.all([axios.get(url[0]), axios.get(url[1])]).then(
+			axios.spread((wilderRes, projectRes) => {
+				this.setState({
+					wilders: wilderRes.data,
+					projects: projectRes.data,
+					isLoaded: true
+				})
+			})
+		)
+	}
 	render() {
-		return (
+		return this.state.isLoaded !== true ? (
+			<h2>Loading ...</h2>
+		) : (
 			<div className='flex-column height-max-100'>
 				<main id='Container' className='flex1 overflow height-max-100'>
-					<WilderCard />
+					<WilderCard wilders={this.state.wilders} />
 					<ProjectCard />
 				</main>
 				<Navbar />
