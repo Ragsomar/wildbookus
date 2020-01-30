@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import WilderCard from './components/WilderCard'
 import ProjectCard from './components/ProjectCard'
+import Header from './components/Header'
 import Navbar from './components/Navbar'
 import './style/Image.css'
 import './style/Layout.css'
@@ -38,10 +39,11 @@ class App extends React.Component {
 		return this.state.isLoaded !== true ? (
 			<h2>Loading ...</h2>
 		) : (
-			<div className='flex-column height-max-100'>
+			<div className='flex-column height-max-100 general-bg'>
+				<Header />
 				<main id='Container' className='flex1 overflow height-max-100'>
 					<WilderCard wilders={this.state.wilders} />
-					<ProjectCard />
+					<ProjectCard projects={this.state.projects} />
 				</main>
 				<Navbar />
 			</div>
