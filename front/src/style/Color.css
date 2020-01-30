@@ -1,0 +1,21 @@
+:root {
+	--main-color: #ea787b;
+	--background: #fae3e4;
+	--shadow: #89898989;
+}
+
+.profile-bg-color {
+	background: linear-gradient(var(--main-color), #ffffff);
+}
+
+.general-bg {
+	background-color: var(--background);
+}
+
+.head-bg {
+	background: linear-gradient(var(--main-color), var(--background));
+}
+
+.shadow {
+	box-shadow: var(--shadow) 10px 10px 10px;
+}
