@@ -24,14 +24,16 @@ VALUES
     (
         4,
         "Wild&co",
-        "https://github.com/Aloxbro/Project_Wildco.io"
+        "https://github.com/Aloxbro/Project_Wildco.io",
+        ""
     ),
     (
         5,
         "Book des Wilders",
-        "https://github.com/JCor51/BookWildCodeSchoolSeptembre2019"
+        "https://github.com/JCor51/BookWildCodeSchoolSeptembre2019",
+        ""
     ),
-    (6, "Wild Green School"),
+    (6, "Wild Green School", "", ""),
     (
         7,
         "Hallowciné",
@@ -41,9 +43,10 @@ VALUES
     (
         8,
         "A Film With Freddy",
-        "https://github.com/ArchStanton987/aFilmWithFreddy"
+        "https://github.com/ArchStanton987/aFilmWithFreddy",
+        ""
     ),
-    (9, "Adopte un monstre.com"),
+    (9, "Adopte un monstre.com", "", ""),
     (
         10,
         "BetaLoween",
@@ -53,6 +56,7 @@ VALUES
     (
         11,
         "Screech of Movies",
-        "https://github.com/Cindie1908/screech-of-movies"
+        "https://github.com/Cindie1908/screech-of-movies",
+        ""
     ),
-    (12, "Shudder")
+    (12, "Shudder", "", "")
