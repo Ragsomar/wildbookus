@@ -40,14 +40,29 @@ app.get('/wilders', (request, response) => {
 })
 
 app.get('/projects', (request, response) => {
-	connection.query('SELECT * FROM project', (err, results) => {
-		if (err) {
-			console.log(err)
-			response.status(500).send('Erreur retrieving projects')
-		} else {
-			response.json(results)
+	connection.query(
+		'SELECT * FROM project INNER JOIN wilder_has_project ON project.id = wilder_has_project.project_id',
+		(err, results) => {
+			if (err) {
+				console.log(err)
+				response.status(500).send('Erreur retrieving projects')
+			} else {
+				results = results.reduce((acc, result) => {
+					const match = acc.findIndex(value => value.id === result.id)
+					if (match >= 0) {
+						acc[match].wilders.push(result.wilder_id)
+					} else {
+						result.wilders = [result.wilder_id]
+						result.wilder_id = undefined
+						result.project_id = undefined
+						acc.push(result)
+					}
+					return acc
+				}, [])
+				response.json(results)
+			}
 		}
-	})
+	)
 })
 
 app.listen(port, err => {
