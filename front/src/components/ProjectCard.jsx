@@ -14,6 +14,26 @@ class ProjectCard extends React.Component {
 	render() {
 		return (
 			<div className='flex-column'>
+				<div id='Projects' className='width-max-100 space:stack'>
+					<img
+						src={project.screenshot}
+						alt='Astra'
+						className='width100 space:stack'
+					/>
+					<div className='space:inset-squish'>
+						<h3 className='space:stack'>{project.name}</h3>
+					</div>
+				</div>
+				<div className='width-max-100 space:stack'>
+					<img
+						src={project.screenshot}
+						alt='Astra'
+						className='width100 space:stack'
+					/>
+					<div className='space:inset-squish'>
+						<h3 className='space:stack'>{project.name}</h3>
+					</div>
+				</div>
 				<div className='width-max-100 space:stack'>
 					<img
 						src={project.screenshot}
