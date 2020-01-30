@@ -13,7 +13,7 @@
 }
 
 .head-bg {
-	background: linear-gradient(var(--main-color), var(--background));
+	background-color: var(--main-color);
 }
 
 .shadow {
