@@ -13,7 +13,7 @@ class WilderCard extends React.Component {
 
 	render() {
 		return (
-			<div id='WildersComponent' className='flex-column'>
+			<div className='flex-column'>
 				<div
 					id='Wilders'
 					className='flex-row space:inset-squish space:stack flex-both:center'

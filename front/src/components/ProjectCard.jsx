@@ -13,7 +13,7 @@ class ProjectCard extends React.Component {
 	}
 	render() {
 		return (
-			<div id='ProjectsComponent' className='flex-column'>
+			<div className='flex-column'>
 				<div id='Projects' className='width-max-100 space:stack'>
 					<img
 						src={project.screenshot}
